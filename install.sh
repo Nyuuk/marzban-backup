@@ -12,6 +12,7 @@ fi
 SCRIPT_PATH="$(pwd)/start.sh"
 
 echo "cd $(pwd); ./start.sh > 2>&1" > $(pwd)/boot_script.sh
+chmod +x $(pwd)/boot_script.sh
 
 # Tambahkan entri ke crontab jika belum ada
 if ! crontab -l | grep -q "@reboot $SCRIPT_PATH"; then
