@@ -3,7 +3,7 @@ BACKUP_DIR="~/backup-to-github"
 # Cek apakah direktori backup ada atau tidak
 if [ ! -d "$BACKUP_DIR" ]; then
   echo "Direktori backup tidak ditemukan: $BACKUP_DIR"
-  exit 1
+  mkdir $BACKUP_DIR
 fi
 
 # Pindah ke direktori backup
