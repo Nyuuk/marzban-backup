@@ -1,5 +1,7 @@
 #!/bin/sh
-BACKUP_DIR="~/backup-to-github"
+. ./.env
+
+BACKUP_DIR="$HOME/backup-to-github"
 # Cek apakah direktori backup ada atau tidak
 if [ ! -d "$BACKUP_DIR" ]; then
   echo "Direktori backup tidak ditemukan: $BACKUP_DIR"
@@ -8,7 +10,6 @@ fi
 
 # Pindah ke direktori backup
 cd "$BACKUP_DIR"
-. ./.env
 
 # Inisialisasi Git repository jika belum ada
 if [ ! -d ".git" ]; then
