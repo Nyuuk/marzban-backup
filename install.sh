@@ -14,6 +14,9 @@ SCRIPT_PATH="$(pwd)/boot_script.sh"
 echo "cd $(pwd);\nexec ./start.sh > log.txt 2>&1" > $(pwd)/boot_script.sh
 chmod +x $(pwd)/boot_script.sh
 
+git config --global user.email "$(hostname)@bukanvvip.my.id"
+ git config --global user.name "$(hostname)"
+
 # Tambahkan entri ke crontab jika belum ada
 if ! crontab -l | grep -q "@reboot $SCRIPT_PATH"; then
   (crontab -l 2>/dev/null; echo "@reboot $SCRIPT_PATH") | crontab -
