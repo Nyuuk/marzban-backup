@@ -1,5 +1,5 @@
 #!/bin/sh
-BACKUP_DIR="~/backup-to-github"
+BACKUP_DIR="$HOME/backup-to-github"
 # Cek apakah direktori backup ada atau tidak
 if [ ! -d "$BACKUP_DIR" ]; then
   echo "Direktori backup tidak ditemukan: $BACKUP_DIR"
