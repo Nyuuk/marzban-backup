@@ -1,7 +1,7 @@
 # INSTALL
 
 ```
-git clone https://github.com/nyuuk/marzban-backup
+git clone https://github.com/Nyuuk/marzban-backup.git
 sh install.sh
 ```
 
