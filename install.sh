@@ -11,7 +11,7 @@ fi
 # Ganti dengan jalur lengkap menuju skrip backup_to_github.sh
 SCRIPT_PATH="$(pwd)/boot_script.sh"
 
-echo "cd $(pwd); ./start.sh > 2>&1" > $(pwd)/boot_script.sh
+echo "cd $(pwd);\nexec ./start.sh > log.txt 2>&1" > $(pwd)/boot_script.sh
 chmod +x $(pwd)/boot_script.sh
 
 # Tambahkan entri ke crontab jika belum ada
